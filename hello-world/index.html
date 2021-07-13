@@ -28,6 +28,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
 
     <script type="text/babel"> 
+
+        var Title = React.createClass({
+            render: function(){
+                return (
+                    <h2>Hello World</h2>
+                )
+            }
+           
+        }) 
+        ReactDOM.render(<Title />, document.getElementById('render'))
+
     var h1 = React.createElement('h1', null, [
         React.createElement('span', null, 'Texto do span'),
         React.createElement('span', null, 'Texto do span 2')
@@ -38,9 +49,6 @@
 
     ReactDOM.render(h1, document.getElementById('app'))
     console.log(h2Element)
-
-    ReactDOM.render(<h3>Outro tipo de render</h3>, document.getElementById('render'))
-    
     </script>
 </body>
 </html>
