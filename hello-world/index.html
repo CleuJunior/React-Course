@@ -12,13 +12,26 @@
 
 
     </div>
+
+    <div id="meuTeste">
+
+
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
 
     <script>
-    var h1 = React.createElement('h1', null, 'Hello H1 React')
+    var h1 = React.createElement('h1', null, [
+        React.createElement('span', null, 'Texto do span'),
+        React.createElement('span', null, 'Texto do span 2')
+    ])
+
+    var h2Element = React.createElement('h2', null, 'Cleonildo Junior');
+    ReactDOM.render(h2Element, document.getElementById('meuTeste'))
+
     ReactDOM.render(h1, document.getElementById('app'))
-    console.log(h1)
+    console.log(h2Element)
     
     </script>
 </body>
